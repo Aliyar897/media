@@ -1,0 +1,228 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>INFomatics - Stay Informed!</title>
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="{% static 'assets/img/favi.png'%}"
+      sizes="20x20"
+      type="image/png"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'assets/css/vendor.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+  </head>
+
+  <body>
+
+    <!-- search popup end-->
+    <div class="body-overlay" id="body-overlay"></div>
+    <!-- header start -->
+    <div class="navbar-area">
+      <!-- topbar end-->
+      <div class="topbar-area">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-7 align-self-center">
+                <div class="topbar-menu d-flex justify-content-md-start justify-content-center align-items-center flex-column flex-md-row">
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'assets/img/favi.png' %}" alt="Logo" class="img-logo" />
+                        <div class="d-flex flex-column">
+                            <span class="channel-name">FlashNews</span>
+                            <span class="slogan">Instant Updates</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+              class="col-lg-6 col-md-5 mt-2 mt-md-0 text-md-right text-center"
+            >
+            
+              <div class="topbar-social">
+                <div class="topbar-date d-none d-lg-inline-block" id="todays-date">
+                    <i class="fa fa-calendar"></i> Saturday, October 7
+                  </div>
+                  
+                <ul class="social-area social-area-2">
+                  <li>
+                    <a class="facebook-icon" href="#"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="twitter-icon" href="#"
+                      ><i class="fa fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="youtube-icon" href="#"
+                      ><i class="fa fa-youtube-play"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="instagram-icon" href="#"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="google-icon" href="#"
+                      ><i class="fa fa-google-plus"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- topbar end-->
+
+
+      <!-- navbar start -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container nav-container">
+          <div class=" navbar-collapse" id="nextpage_main_menu">
+            <ul class="navbar-nav menu-open">
+              <li class="current-menu-item">
+                {% comment %} <a href="#banner">Home</a> {% endcomment %}
+                <a class="nav-link ajax-trigger" href="#" data-opinion="home"
+                >Home</a
+              >
+              <li class="current-menu-item">
+                {% comment %} <a href="#banner">Home</a> {% endcomment %}
+                <a class="nav-link ajax-trigger" href="#" data-opinion="latest-news"
+                >Latest News</a
+              >
+                
+              </li>
+              <li class="current-menu-item">
+                <a class="nav-link ajax-trigger" href="#" data-opinion="opinion"
+                  >Opinion</a
+                >
+              </li>
+              <li class="current-menu-item">
+                {% comment %} <a href="#latest">Latest News</a> {% endcomment %}
+                <a class="nav-link ajax-trigger" href="#" data-opinion="sport">Sports</a>
+
+              </li>
+              <li class="current-menu-item">
+                {% comment %} <a href="#grid">News Grid</a> {% endcomment %}
+                <a class="nav-link ajax-trigger" href="#" data-opinion="world">International</a>
+
+              </li>
+              <li class="current-menu-item">
+                <a class="nav-link ajax-trigger" href="#" data-opinion="tech">Technology</a>
+
+              </li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </nav>
+      <div class="banner-area banner-inner-1 bg-black" id="banner">
+        <!-- banner area start -->
+
+        {% for news in news_data %}
+
+                <div class="banner-inner pt-5 bg-dark border border-1 border-dark rounded bg-total-black">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-lg-6">
+                        <div class="thumb after-left-top">
+                        <img src="{{ news.image }}" alt="{{ news.title }}" class="img-fluid" style="color: black; font-size: 13px;">
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 align-self-center">
+                        <div class="banner-details mt-4 mt-lg-0">
+                        <div class="post-meta-single">
+                            <ul>
+                            <li><a class="tag-base tag-blue" href="#">{{news.category}}</a></li>
+                            <li class="date">
+                                <i class="fa fa-clock-o"></i>{{news.date_published}} Source: {{news.source}}
+                            </li>
+                            </ul>
+                        </div>
+                        <h2>{{ news.title }}</h2>
+                        <p style="color:white">{{ news.description }}</p>
+                        <a class="btn btn-blue" target='_blank' href="{{news.link}}">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+        {% endfor %}
+      </div>
+    <div class="post-area pd-top-75 pd-bottom-50" id="trending">
+      <div class="container">
+        
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="back-to-top">
+      <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+
+  </body>
+
+
+  
+    <script src="{% static 'assets/js/vendor.js' %}"></script>
+    <script src="{% static 'assets/js/main.js'%}"></script>
+    <script>
+      $(document).ready(function () {
+        $(".ajax-trigger").click(function (e) {
+          e.preventDefault(); // Prevent the default action of the anchor tag
+
+          // Get the opinion data from the data attribute
+          var opinion = $(this).data("opinion");
+
+          $.ajax({
+            type: "POST",
+            url: "http://127.0.0.1:8000/news/",
+            data: { opinion: opinion }, // Pass the opinion data to the backend
+            success: function (response) {
+              // Update the news list container with the new data
+              $("body").html(response); // Replace the entire body content with the response
+            },
+            error: function (xhr, status, error) {
+              // Handle errors here
+              console.error(xhr, status, error);
+            },
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var today = new Date();
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        
+        var dayOfWeek = days[today.getDay()];
+        var month = months[today.getMonth()];
+        var dayOfMonth = today.getDate();
+    
+        var formattedDate = dayOfWeek + ', ' + month + ' ' + dayOfMonth;
+    
+        document.getElementById('todays-date').innerHTML = '<i class="fa fa-calendar"></i> ' + formattedDate;
+      });
+    </script>
+</html>
+
+
+

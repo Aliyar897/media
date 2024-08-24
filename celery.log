@@ -1,0 +1,730 @@
+[2024-06-03 21:51:59,072: WARNING/MainProcess] D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-06-03 21:51:59,090: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2024-06-03 21:51:59,092: WARNING/MainProcess] D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-06-03 21:51:59,107: INFO/MainProcess] mingle: searching for neighbors
+[2024-06-03 21:52:00,101: INFO/SpawnPoolWorker-1] child process 12116 calling self.run()
+[2024-06-03 21:52:00,129: INFO/MainProcess] mingle: all alone
+[2024-06-03 21:52:00,147: INFO/SpawnPoolWorker-4] child process 484 calling self.run()
+[2024-06-03 21:52:00,148: INFO/MainProcess] celery@Haier-PC ready.
+[2024-06-03 21:52:00,177: INFO/SpawnPoolWorker-3] child process 8060 calling self.run()
+[2024-06-03 21:52:00,204: INFO/SpawnPoolWorker-2] child process 6544 calling self.run()
+[2024-06-03 21:52:00,204: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '47c3e93e-86b9-4baf-bb31-a5bc8539526c', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '47c3e93e-86b9-4baf-bb31-a5bc8539526c', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen12452@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'redelivered': True}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery', 'redelivered': True}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:52:00,211: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': 'b72d8657-e55b-42bd-917e-c2cc31be0112', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'b72d8657-e55b-42bd-917e-c2cc31be0112', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen12452@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'redelivered': True}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery', 'redelivered': True}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:52:00,215: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '3661b702-370e-4ea3-9b00-50c408c5df4e', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '3661b702-370e-4ea3-9b00-50c408c5df4e', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen12452@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'redelivered': True}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery', 'redelivered': True}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:52:00,219: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': 'a54e6759-779a-46b2-a625-234b783ded25', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'a54e6759-779a-46b2-a625-234b783ded25', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen12452@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'redelivered': True}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery', 'redelivered': True}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:52:00,222: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '90251b75-8d7e-43cf-ae20-8de80e0559d2', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '90251b75-8d7e-43cf-ae20-8de80e0559d2', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen12452@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'redelivered': True}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery', 'redelivered': True}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:52:00,226: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '5062c3e6-9c1f-4512-bb8a-48d3251e6c9f', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '5062c3e6-9c1f-4512-bb8a-48d3251e6c9f', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen12452@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'redelivered': True}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery', 'redelivered': True}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:52:00,230: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '0de8d42d-58f2-4e16-9240-761a40f85757', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '0de8d42d-58f2-4e16-9240-761a40f85757', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen13284@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'redelivered': True}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery', 'redelivered': True}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:52:00,234: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': 'b33e5bcb-cefa-4340-b51f-9fcf076c3582', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'b33e5bcb-cefa-4340-b51f-9fcf076c3582', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen13284@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'redelivered': True}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery', 'redelivered': True}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:52:00,238: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': 'a264be4f-acaf-4b18-ac1d-0a1c833fba3b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'a264be4f-acaf-4b18-ac1d-0a1c833fba3b', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen13284@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'redelivered': True}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery', 'redelivered': True}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:52:00,241: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '173072ab-767e-448a-931a-25745de223ed', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '173072ab-767e-448a-931a-25745de223ed', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen13172@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'redelivered': True}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery', 'redelivered': True}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:52:00,245: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '2e54ff11-dd24-4d4e-8189-9e88c4e3dbfc', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '2e54ff11-dd24-4d4e-8189-9e88c4e3dbfc', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen13172@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'redelivered': True}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery', 'redelivered': True}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:52:00,249: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '0366135a-051e-410a-aee3-f0f11c0f09e5', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '0366135a-051e-410a-aee3-f0f11c0f09e5', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen13172@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'redelivered': True}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery', 'redelivered': True}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:52:05,550: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': 'b76e221e-ec61-4702-8dd4-29c6781f1bbd', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'b76e221e-ec61-4702-8dd4-29c6781f1bbd', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen11608@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:53:00,005: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '702e6461-1233-4e19-a1e5-0a365e43db8a', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '702e6461-1233-4e19-a1e5-0a365e43db8a', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen11608@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:54:00,003: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '01dd7066-6202-4461-9277-8d45d2b1c5dc', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '01dd7066-6202-4461-9277-8d45d2b1c5dc', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen11608@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:55:00,003: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '9ceb8f2e-a3f8-4a1f-96a3-582097d4539e', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '9ceb8f2e-a3f8-4a1f-96a3-582097d4539e', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen11608@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:56:00,008: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '56dad812-0087-4ae3-a1f6-535909c1b338', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '56dad812-0087-4ae3-a1f6-535909c1b338', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen11608@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:57:02,532: WARNING/MainProcess] D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-06-03 21:57:02,547: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2024-06-03 21:57:02,550: WARNING/MainProcess] D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-06-03 21:57:02,562: INFO/MainProcess] mingle: searching for neighbors
+[2024-06-03 21:57:03,597: INFO/MainProcess] mingle: all alone
+[2024-06-03 21:57:03,617: INFO/SpawnPoolWorker-3] child process 3924 calling self.run()
+[2024-06-03 21:57:03,631: INFO/MainProcess] celery@Haier-PC ready.
+[2024-06-03 21:57:03,663: INFO/SpawnPoolWorker-2] child process 9712 calling self.run()
+[2024-06-03 21:57:03,681: INFO/SpawnPoolWorker-1] child process 12580 calling self.run()
+[2024-06-03 21:57:03,797: INFO/SpawnPoolWorker-4] child process 8020 calling self.run()
+[2024-06-03 21:57:03,847: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': 'c5faa5f3-2119-4c56-9d3b-9a019bc6c33d', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'c5faa5f3-2119-4c56-9d3b-9a019bc6c33d', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen11608@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:58:00,037: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': 'daf24078-bfbe-4631-82bd-2e127de85898', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'daf24078-bfbe-4631-82bd-2e127de85898', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2564@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 21:59:00,006: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '43de9c17-876c-4cd6-a22f-b06decb70033', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '43de9c17-876c-4cd6-a22f-b06decb70033', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2564@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 22:00:00,006: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': 'd856be7d-8386-42e1-9975-669fdd7afea6', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'd856be7d-8386-42e1-9975-669fdd7afea6', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2564@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 22:01:00,004: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': 'b4daa049-e867-41bb-87db-ffd6abaa5fa1', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'b4daa049-e867-41bb-87db-ffd6abaa5fa1', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2564@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 22:02:00,005: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '8e77bf5d-e97a-4245-b905-64f824c9726b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '8e77bf5d-e97a-4245-b905-64f824c9726b', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2564@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 22:03:00,004: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': 'a76b9d6d-a932-47dc-ba97-cedc092fad2e', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'a76b9d6d-a932-47dc-ba97-cedc092fad2e', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2564@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 22:04:00,004: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': 'c879987f-d118-45ce-9728-a571a9546d88', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'c879987f-d118-45ce-9728-a571a9546d88', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2564@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 22:05:00,005: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '3eb2e423-a2f6-47b0-aa20-53f6f6bfe81e', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '3eb2e423-a2f6-47b0-aa20-53f6f6bfe81e', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2564@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 22:06:00,004: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': 'bb0c900f-65d3-4286-ad36-866def4f4a86', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'bb0c900f-65d3-4286-ad36-866def4f4a86', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2564@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 22:07:00,004: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '2fc8b47c-85be-4ae5-94c1-6b6120fda10c', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '2fc8b47c-85be-4ae5-94c1-6b6120fda10c', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2564@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 22:08:00,004: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '8e356eac-0a86-448e-8afe-838da7a678ce', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '8e356eac-0a86-448e-8afe-838da7a678ce', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2564@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
+[2024-06-03 22:09:00,006: ERROR/MainProcess] Received unregistered task of type 'mainpageapp.tasks.hit_endpoint'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'mainpageapp.tasks.hit_endpoint', 'id': '77753850-f364-436a-9501-79af0f62c730', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '77753850-f364-436a-9501-79af0f62c730', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2564@Haier-PC', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "D:\projects(personal)\INFomatics\INFomatics\INFomatics_env\Lib\site-packages\celery\worker\consumer\consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+               ~~~~~~~~~~^^^^^^^
+KeyError: 'mainpageapp.tasks.hit_endpoint'
