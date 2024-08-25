@@ -99,6 +99,7 @@ def fetch_and_save_articles(url, category, max_articles=3):
     for article in all_articles:
         if article['Title'] and article['Description'] and article['Date published'] and article['Image'] and article['Link']:
             save_data_to_database(article['Title'], article['Description'], article['Date published'], article['Image'], article['Link'], category, "Dawn News")
+from django.conf import settings
 
 def dawn():
     logger.info('Starting dawn scraping')
@@ -112,7 +113,7 @@ def dawn():
         "pakistan": "https://www.dawn.com/pakistan",
         "popular": "https://www.dawn.com/popular",
     }
-    max_articles = 2
+    max_articles = settings.NUMBER_OF_NEWS
     with ThreadPoolExecutor(max_workers=len(categories)) as executor:
         futures = [executor.submit(fetch_and_save_articles, url, category, max_articles) for category, url in categories.items()]
         for future in futures:

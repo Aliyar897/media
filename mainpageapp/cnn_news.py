@@ -1,7 +1,5 @@
-import pandas as pd
-import hrequests
-from concurrent.futures import ThreadPoolExecutor
 from bs4 import BeautifulSoup
+import hrequests
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
@@ -10,7 +8,8 @@ from .models import ScrapedNewsData
 from .ml_model import summarize
 import requests
 from dateutil import parser
-
+from concurrent.futures import ThreadPoolExecutor
+import re
 import logging
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -32,7 +31,6 @@ def save_data_to_database(title, description, date_published, image, link, categ
             category=category,
             source=source,
         )
-        data.save()  # Ensure the object is saved to the database
         return data
     except Exception as e:
         logger.error(f"Error saving data to database: {e}")
@@ -50,15 +48,15 @@ def get_details(link):
         driver.quit()  # Close the browser
 
         # Extract data from the soup using utility functions
-        title = get_title_tribune(soup)
-        description = get_description_tribune(soup)
+        title = get_title_aljazeera(soup)
+        description = get_description_aljazeera(soup)
         if not description:
             logger.warning(f"No description found for link: {link}")
             return None
         
         # summary = summarize(description)
-        date = get_date_tribune(soup)
-        image = get_image_tribune(soup)
+        date = get_date_aljazeera(soup)
+        image = get_image_aljazeera(soup)
 
         data = {
             "Title": title,
@@ -72,61 +70,52 @@ def get_details(link):
         logger.error(f"Error fetching details: {link} - {e}")
         return None
 
-def get_article_links(url, max_links=20):
-    logger.info(f"Getting article links from: {url}")
-    try:
-        response = requests.get(url)
-        soup = BeautifulSoup(response.content, 'html.parser')
+   
 
-        # Find all links on the page
-        links = soup.find_all('a')
-        article_links = set()
-        for link in links:
-            if len(article_links) >= max_links:
-                break
-            href = link.get('href')
-            if href and 'https://tribune.com.pk/story/' in href:
-                article_links.add(href)
-        return article_links
-    except Exception as e:
-        logger.error(f"Error fetching article links: {e}")
-        return set()
+def get_article_links(url, max_links=20):
+    response = hrequests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')  
+    links = soup.find_all('a')
+    article_links = set()
+    for link in links:
+        if len(article_links) >= max_links:
+            break
+        href = link.get('href')    
+        pattern = r'/\d{4}/\d{2}/\d{2}/[^/]+/[^/]+-[^/]+-[^/]+/index\.html'
+        if href and re.match(pattern, href):
+            full_url = 'https://edition.cnn.com' + href
+            print(full_url)
+            article_links.add(full_url)
+
+    return article_links
+
+
 
 def fetch_and_save_articles(url, category, max_articles=3):
+    logger.info(f"Fetching and saving articles for category: {category}")
     article_links = get_article_links(url, max_articles)
     all_articles = []
     with ThreadPoolExecutor(max_workers=4) as executor:
         all_articles = list(executor.map(get_details, article_links))
-
-    # Filter out None values in case of errors
     all_articles = [article for article in all_articles if article is not None]
-
-    # Save data to the database
-    for count, article in enumerate(all_articles):
+    for article in all_articles:
         if article['Title'] and article['Description'] and article['Date published'] and article['Image'] and article['Link']:
-            logger.info(f"Saving article {count + 1}")
-            save_data_to_database(article['Title'], article['Description'], article['Date published'], article['Image'], article['Link'], category, "Express Tribune")
+            save_data_to_database(article['Title'], article['Description'], article['Date published'], article['Image'], article['Link'], category, "CNN News")
 
 from django.conf import settings
-def tribune():
+
+def cnn_news():
+    logger.info('Starting dawn scraping')
     categories = {
-        "home": "https://tribune.com.pk/",
-        "latest": "https://tribune.com.pk/latest",
-        "pakistan": "https://tribune.com.pk/pakistan",
-        "world": "https://tribune.com.pk/world",
-        "opinion": "https://tribune.com.pk/opinion",
-        "tech": "https://tribune.com.pk/tech",
-        "sport": "https://tribune.com.pk/sports",
-        "entertainment": "https://tribune.com.pk/entertainment",
+        "world": "https://edition.cnn.com/world",
+   
     }
     max_articles = settings.NUMBER_OF_NEWS
-
     with ThreadPoolExecutor(max_workers=len(categories)) as executor:
         futures = [executor.submit(fetch_and_save_articles, url, category, max_articles) for category, url in categories.items()]
         for future in futures:
             future.result()
+    return "Data fetched from all categories"
 
-    return "Got the data from all categories"
-
-if __name__ == "__main__":
-    tribune()
+if __name__=="__main__":
+   cnn_news()

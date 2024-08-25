@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     # other apps
 ]
 
-
+NUMBER_OF_NEWS = 10
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

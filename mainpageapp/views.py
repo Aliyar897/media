@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from .dawn_news import dawn
 from .express_tribune import tribune
 from .express_urdu import express_urdu
+from .al_jazeeera import aljazeera
+from .cnn_news import cnn_news
 from .ml_model import summarize
 from .models import ScrapedNewsData, States
 # ScrapedNewsData.objects.all().delete()
@@ -122,7 +124,8 @@ def get_new_post(request):
     # thread2.join()
     data = dawn()
     data = tribune()
-    # data = express_urdu()
+    aljazeer = aljazeera()
+    cnn_ = cnn_news()
     print('this is the data i got from the news website')
     return HttpResponse('The news are donwloaded')
 

@@ -342,7 +342,7 @@ function incrementViewCount(postId) {
 
 					$.ajax({
 						type: "POST",
-						url: "http://192.168.100.18:8000/news/",
+						url: "http://192.168.100.18:8000/",
 						data: { opinion: opinion }, // Pass the opinion data to the backend
 						success: function (response) {
 							// Update the news list container with the new data
@@ -383,7 +383,7 @@ function incrementViewCount(postId) {
 		  
 					$.ajax({
 					  type: "POST",
-					  url: "http://127.0.0.1:8000/news/",
+					  url: "http://127.0.0.1:8000/",
 					  data: { opinion: opinion }, // Pass the opinion data to the backend
 					  success: function (response) {
 						// Update the news list container with the new data
